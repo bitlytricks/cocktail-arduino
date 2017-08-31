@@ -36,7 +36,13 @@ class Actor
         Serial.print(" ");
         Serial.print(now);
         Serial.print(" ");
-        Serial.println(activeUntil);
+        Serial.print(activeUntil);
+        Serial.print(" ");
+        Serial.print("PIN tAKTUELL tABCHALT");
+        Serial.print(" ");
+        Serial.print("[SV");
+        Serial.print(actorPin-1);
+        Serial.println("]");
 
         digitalWrite(actorPin, LOW);
         activeUntil = 0;
@@ -84,7 +90,7 @@ void evalSerialData()
     long sv08 = (buffer[62] - 48) * 10000 + (buffer[63] - 48) * 1000 ;
 
     long sv09 = (buffer[70] - 48) * 10000 + (buffer[71] - 48) * 1000 ;
-    long sv10 = (buffer[78] - 48) * 10000 + (buffer[78] - 48) * 1000 ;
+    long sv10 = (buffer[78] - 48) * 10000 + (buffer[79] - 48) * 1000 ;
     long sv11 = (buffer[86] - 48) * 10000 + (buffer[87] - 48) * 1000 ;
     long sv12 = (buffer[94] - 48) * 10000 + (buffer[95] - 48) * 1000 ;
 
@@ -115,8 +121,8 @@ void evalSerialData()
 
 void printActors() {
   for (int i = 0; i < ACTORS; i++) {
-    Serial.print("Anschaltdauer SV");
-    Serial.print(i);
+    Serial.print("Abschaltzeitpunkt SV");
+    Serial.print(i+1);
     Serial.print(" = ");
     Serial.print(actors[i].activeUntil);
     Serial.println(" ms");
