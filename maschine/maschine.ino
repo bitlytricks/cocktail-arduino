@@ -101,14 +101,14 @@ void evalSerialData()
     actors[5].activeFor(sv06);
     actors[6].activeFor(sv07);
     actors[7].activeFor(sv08);
-    actors[8].activeFor(sv01);
-    actors[9].activeFor(sv02);
-    actors[10].activeFor(sv03);
-    actors[11].activeFor(sv04);
-    actors[2].activeFor(sv05);
-    actors[13].activeFor(sv06);
-    actors[14].activeFor(sv07);
-    actors[15].activeFor(sv08);
+    actors[8].activeFor(sv09);
+    actors[9].activeFor(sv10);
+    actors[10].activeFor(sv11);
+    actors[11].activeFor(sv12);
+    actors[12].activeFor(sv13);
+    actors[13].activeFor(sv14);
+    actors[14].activeFor(sv15);
+    actors[15].activeFor(sv16);
 
   }
 }
