@@ -28,7 +28,7 @@ class Actor
       }
     }
 
-    void tick()sdfsfds
+    void tick()
     {
       long now = millis();
       if (activeUntil > 0 && now > activeUntil) {
@@ -43,8 +43,8 @@ class Actor
       }
     }
 };
-const int ACTORS = 8;
-Actor actors[ACTORS] = { Actor(2), Actor(3), Actor(4), Actor(5), Actor(6), Actor(7), Actor(8), Actor(9) };
+const int ACTORS = 16;
+Actor actors[ACTORS] = { Actor(2), Actor(3), Actor(4), Actor(5), Actor(6), Actor(7), Actor(8), Actor(9), Actor(10), Actor(11), Actor(12), Actor(13), Actor(14), Actor(15), Actor(16), Actor(17) };
 
 int bufferCount;    // Anzahl der eingelesenen Zeichen
 char buffer[130];    // Serial Input-Buffer
@@ -101,6 +101,14 @@ void evalSerialData()
     actors[5].activeFor(sv06);
     actors[6].activeFor(sv07);
     actors[7].activeFor(sv08);
+    actors[8].activeFor(sv01);
+    actors[9].activeFor(sv02);
+    actors[10].activeFor(sv03);
+    actors[11].activeFor(sv04);
+    actors[2].activeFor(sv05);
+    actors[13].activeFor(sv06);
+    actors[14].activeFor(sv07);
+    actors[15].activeFor(sv08);
 
   }
 }
